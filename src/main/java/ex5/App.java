@@ -13,9 +13,7 @@ public class App {
 
             int[] ages = Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray();
             for (int age : ages) {
-                if (isChild(age)) {
-                    numberEnfants++;
-                }
+                if (isChild(age)) numberEnfants++;
             }
             System.out.println("Nombre d'enfants pouvant faire du toboggan: ".concat(String.valueOf(numberEnfants)));
         }
