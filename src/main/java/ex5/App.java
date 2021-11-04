@@ -18,7 +18,7 @@ public class App {
                     numberEnfants++;
                 }
             }
-            System.out.println("Nombre d'enfants pouvant daire du toboggan: ".concat(String.valueOf(numberEnfants)));
+            System.out.println("Nombre d'enfants pouvant faire du toboggan: ".concat(String.valueOf(numberEnfants)));
         }
     }
 
