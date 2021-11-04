@@ -1,5 +1,7 @@
 package ex5;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -10,9 +12,9 @@ public class App {
             line = scanner.nextLine();
             int numberEnfants = 0;
 
-            String[] ages = line.split(" ");
-            for (String age : ages) {
-                if (isChild(Integer.parseInt(age))) {
+            int[] ages = Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray();
+            for (int age : ages) {
+                if (isChild(age)) {
                     numberEnfants++;
                 }
             }
