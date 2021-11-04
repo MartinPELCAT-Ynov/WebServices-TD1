@@ -9,9 +9,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            boolean palindrome = isPalindrome(line);
-
-            if (palindrome) {
+            if (isPalindrome(line)) {
                 System.out.println("C'est un palindrome");
             } else {
                 System.out.println("Ce n'est pas un palindrome");
@@ -19,10 +17,11 @@ public class App {
         }
     }
 
-    public static boolean isPalindrome(String str) {
+    public static boolean isPalindrome(String string) {
+        String str = string.toLowerCase();
         int length = str.length();
         for (int i = 0; i < length / 2; i++) {
-            if (str.toLowerCase().charAt(i) != str.toLowerCase().charAt(length - i - 1)) {
+            if (str.charAt(i) != str.charAt(length - i - 1)) {
                 return false;
             }
         }
